@@ -1,3 +1,6 @@
+var Richmond = new google.maps.LatLng(37.578234, -77.536970);
+
+
 var heatmapData = [
     new google.maps.LatLng(37.782, -122.447),
     new google.maps.LatLng(37.782, -122.445),
@@ -19,7 +22,7 @@ var position = firebase.database().ref();
 position.on('value', function(snapshot){
   updateposition(postElement, snapshot.val());
 })
-
+console.log(position);
 
   var Richmond = new google.maps.LatLng(37.578234, -77.536970);
   
