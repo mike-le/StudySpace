@@ -40,6 +40,7 @@ p.inset {
     background-color: rgb(199, 230, 240);
     height: 200px;
     width: 80%;
+    left: 10px;
 }
 h1{
     text-align: center;
