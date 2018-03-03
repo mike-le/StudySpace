@@ -1,5 +1,6 @@
 var map;
 var x;
+var pos;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -12,7 +13,7 @@ function initMap() {
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
-      var pos = {
+      pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
@@ -84,7 +85,7 @@ function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
 // Usage
 
 getUserIP(function(ip){
-  alert("Got IP! :" + ip);
+  alert("Got IP! :" + ip + " and the position is: " + pos);
 });
 
 
@@ -102,10 +103,11 @@ getUserIP(function(ip){
 
   // Get a reference to the database service
   var database = firebase.database();
-  function writeUserData(ip, name, email, imageUrl) {
-    firebase.database().ref('users/' + userId).set({
-      username: name,
-      email: email,
-      profile_picture : imageUrl
-    });
-  }
+  var firebaseRef = firebase.database().ref();
+  
+  firebaseRef.child(ip).set(pos);
+  firebaseRef.child("1").set("lala");
+  
+  database.ref(ip).set(pos);
+  database.ref("1").set("value");
+  
