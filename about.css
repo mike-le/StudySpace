@@ -39,8 +39,6 @@ h1{
 }
 .center{
     margin: auto;
-    max height: 400px;
-    max width: 500px;
     /*padding: 20%;*/
     border: 3px inset;
 }
