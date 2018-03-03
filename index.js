@@ -1,5 +1,6 @@
 var map;
 var x;
+var pos;
 
 function setCookie() {
   document.cookie = "username = John;";
@@ -19,7 +20,7 @@ function initMap() {
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
-      var pos = {
+      pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
@@ -95,17 +96,12 @@ getUserIP(function(ip){
 });
 
 
- // Set the configuration for your app
-  // TODO: Replace with your project's config object
-  var config = {
-    apiKey: "AIzaSyCAoaZ4BUQrHY3rUQ-SAF8IsKfBufmN05c",
-    authDomain: "urmap-247b7.firebaseapp.com",
-    databaseURL: "https://urmap-247b7.firebaseio.com",
-    projectId: "urmap-247b7",
-    storageBucket: "urmap-247b7.appspot.com",
-    messagingSenderId: "210170137071"
-  };
-  firebase.initializeApp(config);
-
   // Get a reference to the database service
   var database = firebase.database();
+
+  var firebaseRef = firebase.database().ref();
+
+  var userip = getUserIP;
+
+  firebaseRef.child("ip").set(userip);
+  
