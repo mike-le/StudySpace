@@ -1,56 +1,4 @@
 var map;
-<<<<<<< HEAD
-
-
-function myIP(){ var vi="uses java to get the users local ip number"
-var yip2=java.net.InetAddress.getLocalHost();	
-var yip=yip2.getHostAddress();
-return yip;
-}//end myIP
-
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 37.580052, lng: -77.540974},
-          zoom: 15
-        });
-              
-      infoWindow = new google.maps.InfoWindow;
-      
-       
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.'+myIP);
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
-      f
-
-
-      document.getElementById("demo").innerHTML = x;
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-      
-=======
 var x;
 
 function setCookie() {
@@ -145,6 +93,17 @@ function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
 getUserIP(function(ip){
   alert("Got IP! :" + ip);
 });
->>>>>>> 2fd12a747cb6be4580cd603598d06ac18de9eff1
 
 
+ // Set the configuration for your app
+  // TODO: Replace with your project's config object
+  var config = {
+    apiKey: "AIzaSyCAoaZ4BUQrHY3rUQ-SAF8IsKfBufmN05c",
+    authDomain: "urmap-247b7.firebaseapp.com",
+    databaseURL: "https://urmap-247b7.firebaseio.com/",
+    storageBucket: "gs://urmap-247b7.appspot.com"
+  };
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
