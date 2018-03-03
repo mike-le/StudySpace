@@ -37,3 +37,6 @@ li a:hover {
 p.inset {
     border-style: inset;
 }
+h1{
+    text-align: center;
+}
