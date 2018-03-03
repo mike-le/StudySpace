@@ -10,6 +10,19 @@
         <li id="li"><a id ="a" href="about.html">About</a></li>
         <li id="li"><a id ="a" href="BuildingCount.html">Building Count</a></li>
     </ul>
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+  var config = { 
+    apiKey: "AIzaSyCAoaZ4BUQrHY3rUQ-SAF8IsKfBufmN05c",
+    authDomain: "urmap-247b7.firebaseapp.com",
+    databaseURL: "https://urmap-247b7.firebaseio.com",
+    projectId: "urmap-247b7",
+    storageBucket: "urmap-247b7.appspot.com",
+    messagingSenderId: "210170137071"
+  };
+  firebase.initializeApp(config);
+</script>
   </head>
   <body>
     <div id="map">
@@ -19,6 +32,7 @@
       <script src = "heatmap.js"></script>
     </div>
 
+    
 
   </body>
 </html>
