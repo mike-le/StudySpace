@@ -39,8 +39,10 @@ p.inset {
     border-style: inset;
     background-color: rgb(199, 230, 240);
     height: 200px;
-    width: 80%;
-    left: 10px;
+    width: 80%
+}
+p.relative{
+    left: ;
 }
 h1{
     text-align: center;
