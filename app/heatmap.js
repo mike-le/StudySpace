@@ -1,4 +1,13 @@
 /* Data points defined as an array of LatLng objects */
+var position = firebase.database().ref();
+
+position.on("value", function(snapshot) {
+
+  console.log(snapshot.val());
+}, function (errorObject) {
+  console.log("The read failed: " + errorObject.code);
+});
+
 var heatmapData = [
   new google.maps.LatLng(37.782, -122.447),
   new google.maps.LatLng(37.782, -122.445),
