@@ -35,9 +35,13 @@ li a:hover {
 }
 
 p.inset {
+    padding: 20px;
     border-style: inset;
+    background-color: rgb(199, 230, 240);
+    height: 200px;
+    width: 80%;
 }
 h1{
     text-align: center;
-    padding: 80px;
+    padding: 50px;
 }
