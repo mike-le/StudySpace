@@ -2,50 +2,6 @@ var map;
 var x;
 var pos;
 
-function setCookie() {
-  document.cookie = "username = John;";
-}
-function getCookie() {
-  alert(document.cookie);
-}
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 37.580052, lng: -77.540974 },
-    zoom: 15
-  });
-
-  infoWindow = new google.maps.InfoWindow;
-
-  // Try HTML5 geolocation.
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
-      infoWindow.open(map);
-      map.setCenter(pos);
-    }, function () {
-      handleLocationError(true, infoWindow, map.getCenter());
-    });
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
-}
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-    'Error: The Geolocation service failed.' :
-    'Error: Your browser doesn\'t support geolocation.');
-  infoWindow.open(map);
-}
-
 /**
  * Get the user IP throught the webkitRTCPeerConnection
  * @param onNewIP {Function} listener function to expose the IP locally
@@ -90,18 +46,70 @@ function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
 }
 
 // Usage
-
+/*
 getUserIP(function(ip){
-  alert("Got IP! :" + ip);
+  alert("Got IP! :" + ip + " and the position is: " + pos);
+  x = ip;
 });
+*/
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 37.580052, lng: -77.540974 },
+    zoom: 15
+  });
+
+  infoWindow = new google.maps.InfoWindow;
+
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      
+      alert(pos.lat);
+      getUserIP(function(ip){
+        alert("Got IP! :" + ip + " and the position is: " + pos.lat + "  " + pos.lng);
+        var database = firebase.database();
+
+      var firebaseRef = firebase.database().ref();
+        
+      firebaseRef.child(String(ip).replace(/\D/g,'')).set(" "+ pos.lat+" "+pos.lng);
+      });
+
+      infoWindow.setPosition(pos);
+      
+      infoWindow.setContent('Location found.');
+      infoWindow.open(map);
+      map.setCenter(pos);
+    }, function () {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+}
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
+    'Error: The Geolocation service failed.' :
+    'Error: Your browser doesn\'t support geolocation.');
+  infoWindow.open(map);
+}
 
 
-  // Get a reference to the database service
-  var database = firebase.database();
-
-  var firebaseRef = firebase.database().ref();
-
+<<<<<<< HEAD
   var userip = getUserIP;
   
   firebaseRef.child("ip").set(userip);
+=======
+
+
+  // Get a reference to the database service
+  
+>>>>>>> 6c7e1a01c50bc2130ffee4141f35665f9c55e126
   
