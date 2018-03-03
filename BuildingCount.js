@@ -28,19 +28,19 @@
           <td>Philip Cramer</td>
         </tr>
         <tr>
-          <td>Laughing Bacchus Winecellars</td>
+          <td>Modlin Center for the Arts</td>
           <td>Yoshi Tannamuri</td>
         </tr>
         <tr>
-          <td>Magazzini Alimentari Riuniti</td>
+          <td>Richmond Hall</td>
           <td>Giovanni Rovelli</td>
         </tr>
         <tr>
-          <td>North/South</td>
+          <td>Whitehurst</td>
           <td>Simon Crowther</td>
         </tr>
         <tr>
-          <td>Paris spécialités</td>
+          <td>Weinstein Hall</td>
           <td>Marie Bertrand</td>
         </tr>
       </table>
