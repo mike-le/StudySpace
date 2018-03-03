@@ -35,7 +35,8 @@ li a:hover {
 }
 h1{
     text-align: center;
-    padding: 50px;
+    padding: 30px;
+    background-color: lavender;
 }
 .container {
     position: relative;
