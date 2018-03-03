@@ -1,6 +1,11 @@
 var map;
-var x ;
-x=6;
+
+
+function myIP(){ var vi="uses java to get the users local ip number"
+var yip2=java.net.InetAddress.getLocalHost();	
+var yip=yip2.getHostAddress();
+return yip;
+}//end myIP
 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -9,9 +14,8 @@ x=6;
         });
               
       infoWindow = new google.maps.InfoWindow;
-        document.cookie ="username=John ;"
-         x =document.cookie;
-        x= 6;
+      
+       
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
@@ -21,9 +25,8 @@ x=6;
             };
 
 
-
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('Location found.'+myIP);
             infoWindow.open(map);
             map.setCenter(pos);
           }, function() {
@@ -34,6 +37,9 @@ x=6;
           handleLocationError(false, infoWindow, map.getCenter());
         }
       }
+      f
+
+
       document.getElementById("demo").innerHTML = x;
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
@@ -42,5 +48,6 @@ x=6;
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
+      
 
 
