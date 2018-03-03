@@ -33,15 +33,20 @@ li a:hover {
 .active {
     background-color: #4CAF50;
 }
-
-p.inset {
-    padding: 20px;
-    border-style: inset;
-    background-color: rgb(199, 230, 240);
-    height: 200px;
-    width: 80%
-}
 h1{
     text-align: center;
     padding: 50px;
+}
+.center{
+    position: relative;
+    text-align: left;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    border: 3px inset;
+}
+p{
+    margin: 0;
+    padding: 2px;
+    text-align: left;
 }
