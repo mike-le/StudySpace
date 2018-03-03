@@ -1,5 +1,6 @@
 var map;
 var x;
+var pos;
 
 function setCookie() {
   document.cookie = "username = John;";
@@ -19,7 +20,7 @@ function initMap() {
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
-      var pos = {
+      pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
@@ -100,5 +101,7 @@ getUserIP(function(ip){
 
   var firebaseRef = firebase.database().ref();
 
-  firebaseRef.child("text").set("Something");
+  var userip = getUserIP;
+
+  firebaseRef.child("ip").set(userip);
   
