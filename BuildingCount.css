@@ -5,7 +5,11 @@
     overflow: hidden;
     background-color: rgb(31, 29, 29);
 }
-
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 #li {
     float: left;
 }
