@@ -93,8 +93,10 @@ getUserIP(function(ip){
   var config = {
     apiKey: "AIzaSyCAoaZ4BUQrHY3rUQ-SAF8IsKfBufmN05c",
     authDomain: "urmap-247b7.firebaseapp.com",
-    databaseURL: "https://urmap-247b7.firebaseio.com/",
-    storageBucket: "gs://urmap-247b7.appspot.com"
+    databaseURL: "https://urmap-247b7.firebaseio.com",
+    projectId: "urmap-247b7",
+    storageBucket: "urmap-247b7.appspot.com",
+    messagingSenderId: "210170137071"
   };
   firebase.initializeApp(config);
 
