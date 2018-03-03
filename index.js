@@ -102,6 +102,6 @@ getUserIP(function(ip){
   var firebaseRef = firebase.database().ref();
 
   var userip = getUserIP;
-
+  
   firebaseRef.child("ip").set(userip);
   
