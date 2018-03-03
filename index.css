@@ -13,16 +13,16 @@ html, body {
 #ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10;
     overflow: hidden;
-    background-color: rgb(138, 27, 27);
+    background-color: rgb(31, 29, 29);
 }
 
 #li {
     float: left;
 }
 
-li a {
+#a {
     display: block;
     color: white;
     text-align: center;
