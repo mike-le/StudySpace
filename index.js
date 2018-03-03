@@ -1,13 +1,6 @@
 var map;
 var x;
 
-function setCookie() {
-  document.cookie = "username = John;";
-}
-function getCookie() {
-  alert(document.cookie);
-}
-
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: 37.580052, lng: -77.540974 },
@@ -107,3 +100,10 @@ getUserIP(function(ip){
 
   // Get a reference to the database service
   var database = firebase.database();
+  function writeUserData(ip, name, email, imageUrl) {
+    firebase.database().ref('users/' + userId).set({
+      username: name,
+      email: email,
+      profile_picture : imageUrl
+    });
+  }
