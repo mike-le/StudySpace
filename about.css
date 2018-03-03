@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background-color: lightblue;
 }
@@ -5,4 +6,31 @@ body {
 h1 {
     color: navy;
     margin-left: 20px;
+=======
+#ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(138, 27, 27);
+}
+
+#li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.active {
+    background-color: #4CAF50;
+>>>>>>> e6ed60c665df4f5326045306ab27e35b1f6f8fc2
 }
