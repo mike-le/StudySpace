@@ -5,15 +5,21 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="index.css">
-    <ul id="ul">
+    <!-- <ul id="ul">
         <li id="li"><a class="active" id="a" href="index.html">Home</a></li>
         <li id="li"><a id ="a" href="about.html">About</a></li>
         <li id="li"><a id ="a" href="BuildingCount.html">Building Count</a></li>
-    </ul>
+    </ul> -->
   </head>
   <body>
-    <div id="map"></div>
+    <!-- <div id="map"></div> -->
     <script src = "index.js"></script>
+    <script type="text/javascript">
+      var userip;
+    </script>
+    <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+    
+    <p id="userip"></p>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeq5x-ErnFFGrxV9ThIrOb-hwdHdUL2w&callback=initMap"
     async defer></script>
   </body>
