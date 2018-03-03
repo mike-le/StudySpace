@@ -44,7 +44,7 @@ function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
       ice.candidate.candidate.match(ipRegex).forEach(iterateIP);
   };
 }
-
+ 
 // Usage
 /*
 getUserIP(function(ip){
