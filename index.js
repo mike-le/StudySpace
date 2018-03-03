@@ -102,14 +102,8 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 
-<<<<<<< HEAD
-  var userip = getUserIP;
-  
-  firebaseRef.child("ip").set(userip);
-=======
 
 
   // Get a reference to the database service
   
->>>>>>> 6c7e1a01c50bc2130ffee4141f35665f9c55e126
   
