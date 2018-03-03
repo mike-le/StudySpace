@@ -33,3 +33,10 @@ li a:hover {
 .active {
     background-color: #4CAF50;
 }
+
+p.inset {
+    border-style: inset;
+}
+h1{
+    text-align: center;
+}
