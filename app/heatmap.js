@@ -1,5 +1,4 @@
 /* Data points defined as an array of LatLng objects */
-
 var heatmapData = [
   new google.maps.LatLng(37.578335, -77.537486),
   new google.maps.LatLng(37.578435, -77.537386),
@@ -28,3 +27,6 @@ var heatmap = new google.maps.visualization.HeatmapLayer({
   data: heatmapData
 });
 heatmap.setMap(map);
+
+
+console.log(somedata[]);
