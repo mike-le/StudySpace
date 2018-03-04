@@ -8,6 +8,19 @@ var heatmapData = [
   new google.maps.LatLng(37.578435, -77.537366),
   new google.maps.LatLng(37.578809, -77.536300),
   new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
+  new google.maps.LatLng(37.577805, -77.538167),
   new google.maps.LatLng(37.577134, -77.538532),
   new google.maps.LatLng(37.578494, -77.535388),
   new google.maps.LatLng(37.576120, -77.537135),
@@ -63,7 +76,10 @@ map = new google.maps.Map(document.getElementById('map'), {
   mapTypeId: 'roadmap'
 });
 var heatmap = new google.maps.visualization.HeatmapLayer({
-  data: heatmapData
+  data: heatmapData,
+  radius: 20,
+  opacity: .8,
+  maxIntensity: 8
 });
 heatmap.setMap(map);
 
