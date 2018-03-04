@@ -29,4 +29,3 @@ var heatmap = new google.maps.visualization.HeatmapLayer({
 heatmap.setMap(map);
 
 
-console.log(somedata[]);
