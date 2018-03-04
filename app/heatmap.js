@@ -24,6 +24,37 @@ var heatmapData = [
  //Jepson corner  37.578165, -77.537769
                   //37.578661, -77.536717
 ];
+var database = firebase.database();
+var myJSON;
+var somedata= [];
+var ref = firebase.database().ref();
+
+var ref = firebase.database().ref();
+
+ref.on("value", function(data) {
+  data.forEach(function(data) {
+    myJSON = JSON.stringify(data);
+/*
+  //  var arr = Object.keys(JSON.parse(myJSON)).map(function(k) { return myJSON[k]});
+  //  console.log(arr);
+    
+    var ip = myJSON.substring(31, 42);
+    somedata.push(ip);
+    console.log(typeof ip);
+    console.log(ip);
+    
+    //somedata.concat(myJSON);
+    /*data1 = myJSON;*/
+   // obj = JSON.parse(data);
+
+   /*
+    somedata.push(ip);
+    console.log(somedata[0]);
+  */
+  }
+   
+)});
+
 var Richmond = new google.maps.LatLng(37.580052, -77.540974);
 
 map = new google.maps.Map(document.getElementById('map'), {
