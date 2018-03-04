@@ -32,6 +32,8 @@ ref.on("value", function(data) {
     console.log(myJSON);
     //somedata.concat(myJSON);
     /*data1 = myJSON;*/
+   // obj = JSON.parse(data);
+    somedata.push(obj);
     console.log(somedata[0]);
   }
    
@@ -51,4 +53,4 @@ var heatmap = new google.maps.visualization.HeatmapLayer({
 heatmap.setMap(map);
 
 
-console.log(somedata[]);
+console.log(somedata[0]);
