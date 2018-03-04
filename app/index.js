@@ -75,7 +75,13 @@ function initMap() {
 
       var firebaseRef = firebase.database().ref();
         
-      firebaseRef.child(String(ip).replace(/\D/g,'')).set(" "+ pos.lat+" "+pos.lng);
+     /* firebaseRef.child(String(ip).replace(/\D/g,'')).set( pos.lat+" "+pos.lng);*/
+     var locations = firebaseRef.child("locations");
+     locations.push({
+       ip: String(ip).replace(/\D/g,''),
+       latitude:  pos.lat,
+       longitude: pos.lng
+     });
       });
 
       infoWindow.setPosition(pos);
@@ -100,10 +106,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
-
-
-
-
-  // Get a reference to the database service
-  
-  
