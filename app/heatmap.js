@@ -26,15 +26,23 @@ var ref = firebase.database().ref();
 ref.on("value", function(data) {
   data.forEach(function(data) {
     myJSON = JSON.stringify(data);
+/*
+  //  var arr = Object.keys(JSON.parse(myJSON)).map(function(k) { return myJSON[k]});
+  //  console.log(arr);
+    
     var ip = myJSON.substring(31, 42);
     somedata.push(ip);
-    console.log(typeof myJSON);
-    console.log(myJSON);
+    console.log(typeof ip);
+    console.log(ip);
+    
     //somedata.concat(myJSON);
     /*data1 = myJSON;*/
    // obj = JSON.parse(data);
-    somedata.push(obj);
+
+   /*
+    somedata.push(ip);
     console.log(somedata[0]);
+  */
   }
    
 )});
