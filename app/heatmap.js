@@ -10,8 +10,16 @@ var heatmapData = [
   new google.maps.LatLng(37.577805, -77.538167),
   new google.maps.LatLng(37.577134, -77.538532),
   new google.maps.LatLng(37.578494, -77.535388),
-  new google.maps.LatLng(37.576120, -77.537135)
-  //if((x<37.578661 && x>37.578165) &&(x<-77.536717 && x>-77.537769))
+  new google.maps.LatLng(37.576120, -77.537135),
+  new google.maps.LatLng(37.575170, -77.540721),
+  new google.maps.LatLng(37.575501, -77.542942),
+  new google.maps.LatLng(37.573996, -77.542716),
+  new google.maps.LatLng(37.573435, -77.541118),
+  new google.maps.LatLng(37.574302, -77.539927)
+
+ 
+ 
+  //if((x<37.578661 && x>37.578165) &&(y<-77.536717 && y>-77.537769))
  
  //Jepson corner  37.578165, -77.537769
                   //37.578661, -77.536717
@@ -29,4 +37,3 @@ var heatmap = new google.maps.visualization.HeatmapLayer({
 heatmap.setMap(map);
 
 
-console.log(somedata[]);
